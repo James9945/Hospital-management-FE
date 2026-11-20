@@ -8,6 +8,7 @@ import PublicLayout from "../layouts/PublicLayout";
 import DashboardLayout from "../components/layout/DashboardLayout";
 
 import Login from "../pages/auth/Login";
+import Register from "../pages/auth/Register";
 import Dashboard from "../pages/dashboard/Dashboard";
 
 import Patients from "../pages/patients/Patients";
@@ -33,11 +34,16 @@ const AppRouter = () => {
     return (
         <BrowserRouter>
             <Routes>
-                {/* Public Routes */}
+               {/* Public Routes */}
                 <Route element={<PublicLayout />}>
                     <Route
-                        path="/"
-                        element={<Login />}
+                         path="/"
+                         element={<Login />}
+                    />
+
+                    <Route
+                        path="/register"
+                        element={<Register />}
                     />
                 </Route>
 
