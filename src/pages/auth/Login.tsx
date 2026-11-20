@@ -2,6 +2,8 @@ import { useState } from "react";
 import Card from "../../components/ui/card";
 import Input from "../../components/ui/input";
 import Button from "../../components/ui/button";
+import { Link } from "react-router-dom";
+
 
 import { login } from "../../services/authServices";
 import { useNavigate } from "react-router-dom";
@@ -98,6 +100,10 @@ const Login = () => {
                         >
                         {loading ? "Logging in..." : "Login"}
                     </Button>
+
+                    <p>
+                        Need an account? <Link to="/register">Register here</Link>
+                    </p>
                 </form>
             </Card>
         </div>
